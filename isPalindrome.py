@@ -5,12 +5,12 @@ def isPalindrome(x):
     """
     temp = x
     flip = 0
-    while(temp>0):
-        i = 1
+    i = 0
+    while(temp>0): 
         digit = temp % 10
-        temp /= 10
-        flip += digit*i
-        i+1
+        temp = temp // 10
+        flip += digit*10**i
+        i += 1
     return (flip == x)
 
 def main():
